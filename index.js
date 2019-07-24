@@ -23,6 +23,10 @@ app.get('/api/postname/:name', (req, res)=>{
     }
 })
 
+app.get('*', (req, res)=>{
+    res.send("No Such EndPoint")
+})
+
 app.listen(8080)
 
 function PostName(code) {
